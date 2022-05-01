@@ -18,8 +18,8 @@ while True:
     decodedObjects = pyzbar.decode(frame)
     for obj in decodedObjects:
         code=str(obj.data)
-        location1 = "40.6008623"
-        location2 = "-74.3644696"
+        location1 = "insert address"
+        location2 = "insert address"
         url = f"b'https://maps.google.com/local?q={location1},{location2}'"
         if code == url:
             window_text = "Right Address!"
@@ -30,7 +30,7 @@ while True:
             cv2.putText(frame, window_text, (50, 50), font, 4, (0, 0, 255), 3)
             cv2.rectangle(frame, start_point, end_point, redcolor, thickness)
     
-    cv2.imshow("SLAM.AI - MakEMinds", frame)
+    cv2.imshow("dunnoname.AI - Meer", frame)
         
     key = cv2.waitKey(1)
     if key == 27:
